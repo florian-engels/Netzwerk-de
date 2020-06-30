@@ -2,8 +2,6 @@
 
 #gehe zuerst in den repository ordner
 
-# hier code hin:
-
 cp config.tutorial.yaml config.yaml
 conda activate pypsa-eur
 
