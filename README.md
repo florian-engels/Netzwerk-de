@@ -1,7 +1,12 @@
 # Netzwerk-de
 
-zu Beginn muss das repository geklont werden und entweder anaconda oder miniconda installiert werden.
+1. Zu Beginn klone dieses Repository.
 
-Starte dann mit der initialize Datei (einmalige Ausführung)
+2. Klone das Git Repository PyPSA-eur.
 
-Danach kann ein Beispielnetz mithilfe der make_network Datei erstellt werden.
+3. Installiere Anaconda oder Miniconda:
+https://docs.conda.io/projects/conda/en/latest/user-guide/install/
+
+4. Führe nun die initialize.sh Datei auf dem pypsa-eur repository aus.
+
+5. Erstelle ein Beispielnetz von 50 Knoten mithilfe der make_network.sh Datei, ebenfalls auf dem pypsa-eur repository.
