@@ -3,6 +3,8 @@
 #gehe zuerst in den repository ordner
 
 cp config.tutorial.yaml config.yaml
+
+source $(conda info --base)"/etc/profile.d/conda.sh"
 conda activate pypsa-eur
 
 # Erzeugen eines 50Knoten Beispielnetzwerks
