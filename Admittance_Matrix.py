@@ -12,7 +12,7 @@ import pypsa
 
 import matplotlib.pyplot as plt
 plt.style.use("bmh")
-get_ipython().run_line_magic('matplotlib', 'inline')
+# get_ipython().run_line_magic('matplotlib', 'inline')
 
 
 # In[3]:
