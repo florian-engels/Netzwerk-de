@@ -6,6 +6,7 @@ conda install -c conda-forge mamba
 
 mamba env create -f environment.yaml
 
+source $(conda info --base)"/etc/profile.d/conda.sh"
 conda activate pypsa-eur
 
 conda install -c conda-forge mamba
