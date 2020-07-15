@@ -12,35 +12,178 @@ import pypsa
 
 import matplotlib.pyplot as plt
 plt.style.use("bmh")
-# get_ipython().run_line_magic('matplotlib', 'inline')
-
-
-# In[3]:
-
-
-n = pypsa.Network("elec_s_317_ec_lcopt_Co2L-24H.nc")
-n.plot();
+#get_ipython().run_line_magic('matplotlib', 'inline')
 
 
 # ## admittance Matrix
 
-# In[4]:
+# In[192]:
 
 
-n.determine_network_topology()
+def create_admittance(data):
+    n = pypsa.Network(data)
+    n.determine_network_topology()
+    for sub in n.sub_networks.obj:
+        pypsa.pf.calculate_Y(sub)
+    
+    return sub.Y
 
 
-# In[6]:
+# In[193]:
 
 
-for sub in n.sub_networks.obj:
-    pypsa.pf.calculate_Y(sub)
+##Erstelle Admittanzmatrix (noch mit Dateinamen hart gecodet)
+create_admittance("elec_s_5_ec_lcopt_Co2L-24H.nc")
 
 
-# In[8]:
+# In[194]:
 
 
-print(sub.Y)
+np.array(n.buses.index)
+
+
+# In[ ]:
+
+
+
+
+
+# In[170]:
+
+
+
+
+
+# In[172]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[103]:
+
+
+
+
+
+# In[105]:
+
+
+
+
+
+# In[106]:
+
+
+
+
+
+# In[107]:
+
+
+
+
+
+# In[108]:
+
+
+
+
+
+# In[114]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
 
 
 # In[ ]:
