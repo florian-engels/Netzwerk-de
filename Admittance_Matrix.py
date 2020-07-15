@@ -18,7 +18,7 @@ plt.style.use("bmh")
 # In[3]:
 
 
-n = pypsa.Network("elec_s_5_ec_lcopt_Co2L-24H.nc")
+n = pypsa.Network("elec_s_317_ec_lcopt_Co2L-24H.nc")
 n.plot();
 
 
