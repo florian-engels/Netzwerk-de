@@ -11,8 +11,12 @@ https://docs.conda.io/projects/conda/en/latest/user-guide/install/
 
 5. Erstelle ein Beispielnetz von 5 Knoten mithilfe der make_network.sh Datei, ebenfalls auf dem pypsa-eur repository.
 
-6. Führe das Python Script "Admittance Matrix" im Ordner ".../pypsa-eur/results/networks" aus. 
-Hier entsteht nun eine Admittance Matrix.
+6. Kopiere die Datei "create_Admittance.py" aus dem Netzwerk-de Repo in den Ordner ".../pypsa-eur/results/networks".
+
+7. Führe die create_csv.sh Datei im Odner ".../pypsa-eur/results/networks" aus.
+In dem Ordner ".../pypsa-eur/results/networks" wurden nun csv Dateien erstellt, welche die Admittanz Matrix
+sowie Bus-Informationen enthalten.
+
 
 
 ## Vorsicht!
