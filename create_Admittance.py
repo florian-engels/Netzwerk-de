@@ -56,7 +56,7 @@ if __name__ == '__main__':
     else:
         adm = create_admittance(sys.argv[1])
         save_csv = "{}/admittance".format(os.getcwd())
-        pd.DataFrame(adm.todense()).to_csv(save_csv)
+        pd.DataFrame(adm).to_csv(save_csv)
         
         buses = create_info_df(sys.argv[1])
         save_csv = "{}/buses".format(os.getcwd())
