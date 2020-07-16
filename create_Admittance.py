@@ -49,16 +49,18 @@ def create_info_df(data):
 
 import sys
 import os
+import scipy.sparse
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
         print('Invalid Numbers of Arguments. Script will be terminated.')
     else:
         adm = create_admittance(sys.argv[1])
-        save_csv = "{}/admittance".format(os.getcwd())
-        pd.DataFrame(adm).to_csv(save_csv)
+        #save_csv = "{}/admittance".format(os.getcwd())
+        #pd.DataFrame(adm).to_csv(save_csv)
+        scipy.sparse.save_npz('admittance.npz', adm)
         
         buses = create_info_df(sys.argv[1])
-        save_csv = "{}/buses".format(os.getcwd())
+        save_csv = "{}/buses.csv".format(os.getcwd())
         pd.DataFrame(buses).to_csv(save_csv)
 
