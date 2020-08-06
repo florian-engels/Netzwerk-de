@@ -63,10 +63,7 @@ if __name__ == '__main__':
         buses = create_info_df(sys.argv[1])
         save_csv = "{}/buses.csv".format(os.getcwd())
         pd.DataFrame(buses).to_csv(save_csv)
-
-
-# In[ ]:
-
-
-n.export_to_csv_folder('ExportTest')
+        
+        #testweise export von CSV's
+        pypsa.Network(sys.argv[1]).export_to_csv_folder('ExportTest')
 
