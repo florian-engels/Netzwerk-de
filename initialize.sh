@@ -13,6 +13,7 @@ conda install -y -c conda-forge mamba
 
 #installiere solver
 mamba install -y -c conda-forge ipopt coincbc
+mamba install -c conda-forge glpk
 
 # kopiere die default konfiguration
 cp config.default.yaml config.yaml
