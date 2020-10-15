@@ -17,11 +17,12 @@ https://docs.conda.io/projects/conda/en/latest/user-guide/install/
 
 8. Wenn im Terminal das Environment pypsa-eur noch nicht aktiviert ist, aktiviere dies mittels "conda activate pypsa-eur". Sollte es zu Problemen kommen, muss evtl zuerst "conda init <SHELL_NAME>" ausgeführt werden. (ShellName ist hier gleich zsh?) Danach das Terminal schließen und wieder öffnen und erneut "conda activate pypsa-eur" eingeben.
 
-9. Führe die runOptimization.sh Datei im Odner ".../pypsa-eur/networks" aus.
-Im ersten Schritt werden mithilfe des Python Scripts die Daten vom Fraunhofer Institut zum Import in die richtige Form gebracht.
+9. Führe die "runOptimization.sh" Datei im Odner ".../pypsa-eur/networks" aus.
+Im ersten Schritt werden mithilfe des Python Scripts die Daten vom Fraunhofer Institut zum Import in die richtige Form gebracht,
+sowie die Parameter richtig eingestellt.
 Im zweiten Schritt wird ein Linear optimal power flow angestoßen. Die neuen Csv's finden sich im Ordner "Solution".
 
-
+10. Nun können die Ergebnisse der Optimierung in der CSV Datei "generators-p.csv" im Ordner "Solution" eingesehen werden.
 
 
 ## Vorsicht!

@@ -9,42 +9,43 @@ import pypsa
 import os
 
 
-# In[2]:
+# In[18]:
 
 
 LoadData = pd.read_csv('LoadDataTest.csv', sep=",",decimal=".")
 
 
-# In[3]:
+# In[19]:
 
 
 SolarData = pd.read_csv('SolarTest.csv', sep=",",decimal=".")
 
 
-# In[4]:
+# In[20]:
 
 
 WindData = pd.read_csv('WindTest.csv', sep=",",decimal=".")
 
 
-# In[5]:
+# In[21]:
 
 
 n = pypsa.Network("elec_s_4.nc")
 
 
-# In[6]:
+# In[22]:
 
 
 n.export_to_csv_folder('Export_Import')
 
 
-# In[7]:
+# In[23]:
 
 
 generators = pd.read_csv('Export_Import/generators-p_max_pu.csv', sep=",",decimal=".")
 
-#Offwind Spalten rausschmeißen
+#Offwind Spalten rausschmeißen (EDIT: funktioniert beim Einlesen so nicht, hab es jetzt anders gelöst, könnte also rausgeworfen werden
+#so jedoch zum Auswerten später leichter
 generators = generators[generators.columns.drop(list(generators.filter(regex='offwind')))]
 
 #Länge der Input Daten anpassen
@@ -65,7 +66,7 @@ generators["DE0 3 onwind"] = WindData["DE0 3"]
 generators["DE0 3 solar"] = SolarData["DE0 3"]
 
 
-# In[8]:
+# In[24]:
 
 
 loads = pd.read_csv('Export_Import/loads-p_set.csv', sep=",",decimal=".")
@@ -86,7 +87,7 @@ loads["DE0 3"] = LoadData["DE0 3"]
 
 
 
-# In[9]:
+# In[25]:
 
 
 dir = os.getcwd()
@@ -109,7 +110,13 @@ loads.to_csv(output_fileL, index = False)
 
 
 
-# In[33]:
+# In[ ]:
+
+
+
+
+
+# In[ ]:
 
 
 
